@@ -3,7 +3,6 @@ filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim/
 call vundle#rc()
 Bundle 'VundleVim/Vundle.vim'
-Bundle 'liuchengxu/space-vim-dark'
 Bundle 'node.js'
 Bundle 'davidhalter/jedi-vim'  
 Bundle 'ervandew/supertab' 
@@ -15,8 +14,8 @@ Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'marvelfans/vim-neatstatus'
 Bundle 'Tagbar'
-Bundle 'vim-airline/vim-airline'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'iCyMind/NeoSolarized'
 filetype on
 " ============================================================ "
 """" 快捷键
@@ -110,8 +109,9 @@ au BufNewFile,BufRead *.py\
        \ set fileformat=unix
 
 set laststatus=2
-
-colorscheme space-vim-dark
+set termguicolors
+colorscheme NeoSolarized
+set background=light
 hi Comment cterm=italic
 set number
 highlight lineNr cterm=NONE ctermfg=249 ctermbg=179 guifg=LightYellow guibg=Grey
@@ -149,6 +149,7 @@ autocmd Filetype python  match OverLength /\%121v.\+/
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+let g:airline_theme='one'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
