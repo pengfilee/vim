@@ -14,7 +14,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'marvelfans/vim-neatstatus'
-
+Bundle 'Tagbar'
+Bundle 'vim-airline/vim-airline'
+Bundle 'airblade/vim-gitgutter'
 filetype on
 " ============================================================ "
 """" 快捷键
@@ -170,3 +172,4 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+set runtimepath^=~/.vim/bundle/ag
