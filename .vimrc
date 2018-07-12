@@ -109,9 +109,6 @@ au BufNewFile,BufRead *.py\
        \ set fileformat=unix
 
 set laststatus=2
-set termguicolors
-colorscheme NeoSolarized
-set background=light
 hi Comment cterm=italic
 set number
 highlight lineNr cterm=NONE ctermfg=249 ctermbg=179 guifg=LightYellow guibg=Grey
