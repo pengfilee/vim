@@ -15,6 +15,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'marvelfans/vim-neatstatus'
 Bundle 'Tagbar'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'solarized'
 Bundle 'iCyMind/NeoSolarized'
 filetype on
 " ============================================================ "
@@ -52,7 +53,7 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,chinese,cp930,GBK
-
+set pastetoggle=<F9>
 set nocompatible
 set history=700
 set ruler
@@ -123,7 +124,7 @@ set guifont=Monaco:h18
 if &term =~ '256color'  
   set t_ut=  
 endif  
-
+let g:vim_markdown_folding_disabled = 1
 syntax on
 syntax enable
  
@@ -146,6 +147,8 @@ autocmd Filetype python  match OverLength /\%121v.\+/
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set background=light
+colorscheme solarized
 let g:airline_theme='one'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -170,4 +173,5 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ag
