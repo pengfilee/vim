@@ -9,7 +9,6 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'marvelfans/vim-neatstatus'
@@ -17,6 +16,7 @@ Bundle 'Tagbar'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'solarized'
 Bundle 'iCyMind/NeoSolarized'
+Bundle 'ctrlpvim/ctrlp.vim'
 filetype on
 " ============================================================ "
 """" 快捷键
@@ -166,7 +166,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <Leader>e :NERDTreeToggle<CR>
 
 "" ctrlp
-" let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_user_command = 'find %s -type f'
 let g:ctrlp_user_command = 'find %s ! -regex ".*\.pyc"'
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
