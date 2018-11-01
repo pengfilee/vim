@@ -3,15 +3,13 @@ filetype off
 set rtp+=$HOME/.vim/bundle/Vundle.vim/
 call vundle#rc()
 Bundle 'VundleVim/Vundle.vim'
-Bundle 'node.js'
+Bundle 'Raimondi/delimitMate'
 Bundle 'davidhalter/jedi-vim'  
 Bundle 'ervandew/supertab' 
 Bundle 'vim-syntastic/syntastic'
 Bundle 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
-Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'marvelfans/vim-neatstatus'
 Bundle 'Tagbar'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'solarized'
@@ -173,5 +171,9 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+" for python docstring ", 特别有用
+au FileType python let b:delimitMate_nesting_quotes = ['"']
+" " 关闭某些类型文件的自动补全
+au FileType mail let b:delimitMate_autoclose = 0
 set clipboard=unnamed
 set runtimepath^=~/.vim/bundle/ag
